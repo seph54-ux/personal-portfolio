@@ -1,0 +1,441 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gradient: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%);
+    --secondary-gradient: linear-gradient(135deg, rgba(240, 147, 251, 1) 0%, rgba(245, 87, 108, 1) 100%);
+    --accent-gradient: linear-gradient(135deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 100%);
+    --dark-gradient: linear-gradient(135deg, rgba(44, 62, 80, 1) 0%, rgba(52, 152, 219, 1) 100%);
+    --text-primary: rgba(44, 62, 80, 1);
+    --text-secondary: rgba(127, 140, 141, 1);
+    --bg-light: rgba(248, 249, 250, 1);
+    --bg-white: rgba(255, 255, 255, 1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-white);
+}
+
+/* Reading Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--primary-gradient);
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+.navbar-logo {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.back-button {
+    background: var(--primary-gradient);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+.back-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--primary-gradient);
+    color: rgba(255, 255, 255, 1);
+    padding: 100px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Typography adjustments for formatting */
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.read-time {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Optional: Add spacing if needed */
+.text-sm {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    background: var(--bg-white);
+    margin: 40px auto 0;
+    padding: 0;
+}
+
+.featured-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: url('../assets/images/blog/featured-gaming-journey.png') no-repeat center center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+.featured-image::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.3;
+}
+
+.content {
+    padding: 0 20px 60px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    color: var(--text-secondary);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Game Cards Section */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 50px 0;
+}
+
+/* Update game-card to use flex layout */
+.game-card {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 1) 0%, rgba(233, 236, 239, 1) 100%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: var(--shadow);
+
+    /* Flexbox for vertical alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+    height: 100%; /* Allow grid to control height */
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(102, 126, 234, 1);
+}
+
+.game-icon-img {
+    height: 5rem;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    min-height: 48px; /* Ensure consistent space for short/long titles */
+}
+
+.read-story-btn {
+    background: var(--primary-gradient);
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    margin-top: auto; /* Push to bottom */
+}
+
+.read-story-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+
+/* Game Stories */
+.game-story {
+    margin: 60px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(248, 249, 250, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 20px;
+    border-left: 5px solid rgba(102, 126, 234, 1);
+}
+
+.story-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.story-icon-img {
+    height: 3.5rem;
+}
+
+.story-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.story-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.story-content strong {
+    color: rgba(102, 126, 234, 1);
+    font-weight: 600;
+}
+
+/* Tip Boxes */
+.tip-box {
+    background: linear-gradient(135deg, rgba(227, 242, 253, 1) 0%, rgba(243, 229, 245, 1) 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 4px solid rgba(33, 150, 243, 1);
+    box-shadow: var(--shadow);
+}
+
+.tip-box h4 {
+    color: rgba(25, 118, 210, 1);
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Quote Block */
+.quote-block {
+    background: var(--dark-gradient);
+    color: rgba(255, 255, 255, 1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+.quote-block::before {
+    content: '"';
+    font-size: 8rem;
+    opacity: 0.1;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Community Links */
+.community-link {
+    display: inline-block;
+    background: var(--accent-gradient);
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.community-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--secondary-gradient);
+    color: rgba(255, 255, 255, 1);
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 60px 0;
+    box-shadow: var(--shadow-hover);
+}
+
+.cta-section h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+    padding: 15px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cta-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Footer Navigation */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(233, 236, 239, 1);
+    margin-top: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: var(--bg-light);
+    transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+    background: var(--primary-gradient);
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 0 15px 40px;
+    }
+    
+    .hero-meta {
+        gap: 20px;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-story {
+        padding: 25px;
+    }
+    
+    .cta-section {
+        padding: 40px 25px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

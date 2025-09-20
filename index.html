@@ -1,14 +1,593 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="Philjoseph Orlina Portfolio">
+  <meta name="description" content="It is a personal website portfolio for Philjoseph Orlina. It showcases his works: graphic designs and UI designs, and it also have his blog posts and showcase for affiliate marketing ">
+  <meta name="keywords" content="Portfolio, Blog Posts, Showcase, Shop">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="revisit-after" content="2 days">
+  <meta name="description" content="English">
+  <meta name="author" content="Philjoseph Orlina">
+
+  <title>Philjoseph Orlina | Front-End Developer & Graphic Designer</title>
+
+  <link rel="shortcut icon" href="./assets/images/Personal Pic.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- AOS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS & JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons (for play icon) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="error-handler.js"></script>
 </head>
+
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <!--Nav bar-->
+  <nav class="navbar d-flex justify-content-between align-items-center sticky-top shadow px-4 py-2">
+    <!-- Logo on the left -->
+    <div class="navbar-logo">
+      <a href="./index.html" class="nav-link"><img src="./assets/images/personal_logo/Seph-logo-light.png" alt="Logo" id="site-logo" class="logo-img" /></a>
+    </div>
+
+     <!-- Hamburger toggle (hidden on desktop) -->
+    <button class="navbar-toggler d-md-none" id="hamburger-btn" aria-label="Toggle navigation">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <!-- Navigation Links on the right -->
+    <ul class="navbar-ul d-flex gap-4 list-unstyled mb-0 unselectable" id="navbar-links">
+      <li><a href="#home" class="nav-link">HOME</a></li>
+      <li><a href="#about" class="nav-link">ABOUT</a></li>
+      <li><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      <li><a href="./blog.html" class="nav-link">BLOGS</a></li>
+      <li><a href="./showcase.html" class="nav-link">SHOWCASE</a></li>
+      <li id="dark-mode-toggle" class="nav-link"><span class="material-symbols-outlined">
+          light_mode
+        </span></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" id="home" class="d-flex align-items-center justify-content-center flex-wrap py-5">
+    <iframe src="https://skybox.blockadelabs.com/e/cd6d1ea6dd5097b6757136adbfb3f5ef" frameborder="0"></iframe>
+    <div class="col-md-4 left">
+      <h1>Hi, I'm Philjoseph Orlina.</h1>
+      <h2>I am a <span id="ityped"></span></h2>
+      <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+        <a href="#contact" class="btn btn-primary get-in-touch-btn d-inline-flex align-items-center justify-content-center">
+          Get in touch <span class="material-symbols-outlined ms-2">arrow_right_alt</span>
+        </a>
+      </div>
+    </div>
+
+    <!--Picture-->
+    <div  class="col-md-4 right d-flex justify-content-center align-items-center">
+      <div class="p-4">
+        <img src="./assets/images/Personal Pic.png" alt="Profile Picture" class="profile-img">
+      </div>
+    </div>
+  </section>
+
+  <!--About Section-->
+  <section id="about" class="py-5" style="background-color: #1a1a1a;">
+    <div class="container">
+      <div class="row align-items-start about-section">
+        <div class="col-md-5 mb-4 mb-md-0">
+          <div class="img-box w-100" style="height: 600px; background-color: #444; border-radius: 16px;">
+            <img src="./assets/images/AI-Pic.png" alt="Profile Picture" class="about-img w-100 h-100 object-fit-cover">
+          </div>
+        </div>
+        <div class="col-md-7 text-light">
+          <h3 class="mt-n3">About Me</h>
+            <h2>Who is <span>Philjoseph Orlina?</span></h2>
+          <p class="fs-5">
+            I'm a passionate engineering graduate who unexpectedly found a strong love for web development.
+            My creativity and logical thinking merged perfectly in this field. But that’s not all —
+            I’m deeply involved in the world of esports, especially in organizing competitive events and designing
+            visuals around them. Outside of all that, I’m just a casual gamer who enjoys playing for fun,
+            appreciating both the art and mechanics of games. <br><br>
+            I'm also proud to say I was formerly a part of our school's esports organization, where I led various projects and events. Currently, I’m building my very own esports group to continue promoting competitive and creative gaming in my community.
+            <br><br>
+            Wanna read more about me? I've got some blogs about myself. Check it out.
+          </p>
+
+          <a href="about-more.html" class="btn btn-primary more-about-btn">
+            More About Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Tools Section -->
+<section id="tools" class="py-5">
+  <div class="container text-center">
+    <p class="text-uppercase small fw-semibold">My Favorite Tools</p>
+    <h2 class="mb-5">Tools That Shape My Creativity</h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Canva -->
+      <div class="col-6 col-sm-4 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="tool-card p-4">
+          <a href="https://www.canva.com/" target="_blank">
+            <img src="./assets/images/icons/canva.png" alt="Canva" class="tool-icon mb-2">
+          </a>
+          <h6 class="mt-2">Canva</h6>
+          <div class="tool-desc">A powerful tool for designing social media graphics and more.</div>
+        </div>
+      </div>
+
+      <!-- Pixellab -->
+      <div class="col-6 col-sm-4 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="tool-card p-4">
+          <a href="https://play.google.com/store/apps/details?id=com.imaginstudio.imagetools.pixellab" target="_blank">
+            <img src="./assets/images/icons/pixellab.png" alt="Pixellab" class="tool-icon mb-2">
+          </a>
+          <h6 class="mt-2">Pixellab</h6>
+          <div class="tool-desc">Create typography-rich designs and edit images effortlessly.</div>
+        </div>
+      </div>
+
+      <!-- Inkscape -->
+      <div class="col-6 col-sm-4 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="tool-card p-4">
+          <a href="https://inkscape.org/release/inkscape-1.3.2/" target="_blank">
+            <img src="./assets/images/icons/inkscape.png" alt="Inkscape" class="tool-icon mb-2">
+          </a>
+          <h6 class="mt-2">Inkscape</h6>
+          <div class="tool-desc">Open-source vector editor, great for logos and SVG art.</div>
+        </div>
+      </div>
+
+      <!-- Pixel Studio -->
+      <div class="col-6 col-sm-4 col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="tool-card p-4">
+          <a href="https://play.google.com/store/search?q=pixel+studio&c=apps" target="_blank">
+            <img src="./assets/images/icons/pixelstudio.png" alt="Pixel Studio" class="tool-icon mb-2">
+          </a>
+          <h6 class="mt-2">Pixel Studio</h6>
+          <div class="tool-desc">Create pixel art and animations easily on any device.</div>
+        </div>
+      </div>
+
+      <!-- FlipaClip -->
+      <div class="col-6 col-sm-4 col-md-3" data-aos="fade-up" data-aos-delay="500">
+        <div class="tool-card p-4">
+          <a href="https://play.google.com/store/apps/details?id=com.vblast.flipaclip" target="_blank">
+            <img src="./assets/images/icons/flipaclip.png" alt="FlipaClip" class="tool-icon mb-2">
+          </a>
+          <h6 class="mt-2">FlipaClip</h6>
+          <div class="tool-desc">Animation tool perfect for storyboarding and frame-by-frame cartoons.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container py-5">
+    <h3 class="text-center mb-5">My Portfolio</h3>
+    <!-- Behind the Designs -->
+      <div class="portfolio-caption aos-init" data-aos="fade-up">
+          <h5 class="caption-title">Behind the Designs</h5>
+          <p class="caption-text collapsed" id="captionText">
+            Most of my poster designs were created for our school’s esports events —
+            from match announcements to stream overlays. These works reflect my passion
+            for competitive gaming, community building, and creative storytelling. 
+            I was part of <a href="https://www.facebook.com/share/1QqMtitQzF/" target="_blank">ACCESs - Tanauan City College</a>,
+            our campus esports org, and I’m now leading my own initiative, 
+            <a href="https://www.facebook.com/share/1M5PN6NjFz/" target="_blank">Rising Pro Esports</a>, where I continue to design with purpose and passion.
+          </p>
+          <button class="read-more-btn mt-2" onclick="toggleCaption()">Read More</button>
+      </div>
+
+    <!--Poster Designs -->
+    <section id="my-works" class="py-4">
+      <div class="container">
+        <h5 class="text-center mb-2">My Works</h5>
+        <h2 class="text-center fw-bold">Poster Design Collection</h2>
+
+        <!-- Main Slider -->
+        <div id="main-slider-poster" class="splide mb-4" aria-label="Poster Showcase" data-aos="fade-up">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODM Logo_Poster.png" alt="Poster 1"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODM Main Poster_.png" alt="Poster 2"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODMPoster.png" alt="Poster 3"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/ML FINALS BRACKET.png" alt="Poster 4"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/ML main poster1.png" alt="Poster 5"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/MVP TEMPLATE.png" alt="Poster 6"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/Postmatch results.png" alt="Poster 7"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/RP banner.png" alt="Poster 8"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/XmasXtreme POSTER.png" alt="Poster 9"></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Thumbnail Slider -->
+        <div id="thumbnail-slider-poster" class="splide" aria-label="Poster Thumbnails">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODM Logo_Poster.png" alt="Poster Thumbnail 1"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODM Main Poster_.png" alt="Poster Thumbnail 2"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/CODMPoster.png" alt="Poster Thumbnail 3"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/ML FINALS BRACKET.png" alt="Poster Thumbnail 4"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/ML main poster1.png" alt="Poster Thumbnail 5"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/MVP TEMPLATE.png" alt="Poster Thumbnail 6"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/Postmatch results.png" alt="Poster Thumbnail 7"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/RP banner.png" alt="Poster Thumbnail 8"></li>
+              <li class="splide__slide"><img src="./assets/images/works_poster/XmasXtreme POSTER.png" alt="Poster 9"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="line" style="width: 100%; height: 2px; background-color: #4b4b4b; margin-top: 2rem;"></div>
+        
+        <!-- Logo Design Section -->
+       <section id="logo-designs" class="my-5 px-3">
+          <div class="logo-description text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title fw-bold">Logo Design Showcase</h2>
+            <h4 class="fw-semibold">Crafting Brand Identities</h4>
+            <p class="mt-3">
+              Each logo here was carefully crafted to capture a brand’s essence — simple, memorable, and scalable. Below are my works categorized into two major design projects.
+            </p>
+          </div>
+
+          <!-- Category 1 -->
+          <div class="mb-5">
+            <h5 class="mb-3 text-uppercase fw-semibold text-center">E-Days 2k23 ML Tournament</h5>
+            <div class="splide" id="logo-slider-1" data-aos="fade-up">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/ML 3d logo.png" alt="Logo 1" class="modal-trigger">
+                      <p class="logo-title">E-Days ML 3d Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/ml logo main 2k23.png" alt="Logo 2" class="modal-trigger">
+                      <p class="logo-title">E-DaysML Main Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/ml main logo black text.png" alt="Logo 3" class="modal-trigger">
+                      <p class="logo-title">E-Days ML Black Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/ml main logo white text.png" alt="Logo 4" class="modal-trigger">
+                      <p class="logo-title">E-Days ML White Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/ml main logo white text gradient bg.png" alt="Logo 5" class="modal-trigger">
+                      <p class="logo-title">E-Days ML White Logo in Gradient bg</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Category 2 -->
+          <div>
+            <h5 class="mb-3 text-uppercase fw-semibold text-center">Rising Pro Esports Logo Designs</h5>
+            <div class="splide" id="logo-slider-2" data-aos="fade-up">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/RP  text logo.png" alt="Logo 6" class="modal-trigger">
+                      <p class="logo-title">RPE Text Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/RP MAIN LOGO.png" alt="Logo 7" class="modal-trigger">
+                      <p class="logo-title">RPE Main Logo w/ Text</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/RP MAIN LOGO2.png" alt="Logo 8" class="modal-trigger">
+                      <p class="logo-title">RPE Main Logo</p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="logo-card">
+                      <img src="./assets/images/works_logo/RP sublogo.png" alt="Logo 9" class="modal-trigger">
+                      <p class="logo-title">RPE subLogo</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Modal for Logo Images -->
+        <div id="logoModal" class="modal" style="display:none;">
+          <span class="close">&times;</span>
+          <img class="modal-content-logo" id="logoModalImg">
+        </div>
+
+        <div class="line" style="width: 100%; height: 2px; background-color: #4b4b4b; margin-top: 2rem;"></div>
+
+        <!--OBS Designs section-->
+        <section id="obs-designs" class="my-5 px-3">
+            <div class="obs-description text-center mb-4" data-aos="fade-up">
+              <h2 class="fw-bold">OBS Overlay Showcase</h2>
+              <h4 class="section-title fw-semibold">Stream-Ready Visuals</h4>
+              <p class="mt-3">
+                These overlays were designed especially for E-Days 2k23 live broadcast, optimized for clarity, energy, and viewer engagement.
+                Want to see them in action? Watch them live 
+                <a href="https://www.facebook.com/share/r/16RRnvceA2/" target="_blank" class="text-decoration-underline fw-semibold">here</a>.
+              </p>
+            </div>
+
+       <!-- Overlay Assets Splide -->
+        <div class="mb-5">
+          <h5 class="text-center text-uppercase fw-semibold mb-3">Overlay Assets</h5>
+          <div class="splide" id="obs-overlay-assets" data-aos="fade-up">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/drafting.png" alt="Overlay 1" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/ending overlay.png" alt="Overlay 2" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/FINAL PREGAME.png" alt="Overlay 3" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/finals ingame overlay.png" alt="Overlay 4" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/in-game overlay (1).png" alt="Overlay 5" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/IN-GAME OVERLAY(1).png" alt="Overlay 6" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/in-game overlay.png" alt="Overlay 7" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/LIVE OVERLAY.png" alt="Overlay 8" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/MAP OVERLAY.png" alt="Overlay 9" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/PATHBOTTOM.png" alt="Overlay 10" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/pre-game stream1.png" alt="Overlay 11" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_overlay/PRE-GAME STREAM2.png" alt="Overlay 12" class="modal-trigger-obs" /></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overlays in Action Splide -->
+        <div>
+          <h5 class="text-center text-uppercase fw-semibold mb-3">Overlays In Action</h5>
+          <div class="splide" id="obs-overlay-action" data-aos="fade-up">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/commbreak.jpg" alt="Overlay in Action 1" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/drafting.jpg" alt="Overlay in Action 2" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/drafting1.png" alt="Overlay in Action 3" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/ingame match.jpg" alt="Overlay in Action 4" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/ingame match2.jpg" alt="Overlay in Action 5" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/Ingame match3.jpg" alt="Overlay in Action 6" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/pregame.jpg" alt="Overlay in Action 7" class="modal-trigger-obs" /></div></li>
+                <li class="splide__slide"><div class="obs-overlay-card"><img src="./assets/images/works_obs/pregame2.jpg" alt="Overlay in Action 8" class="modal-trigger-obs" /></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <div class="line" style="width: 100%; height: 2px; background-color: #4b4b4b; margin-top: 2rem;"></div>
+
+        <!-- Web UI Design -->
+          <section id="web-ui-design" class="my-5 px-3">
+              <div class="web-ui-description text-center mb-4" data-aos="fade-up">
+                <h2 class="fw-bold">Web UI Design</h2>
+                <h4 class="section-title">Mockup Website UI Designs</h4>
+                <p class="mt-3">
+                  A clean and professional interface built for gaming organization branding. This is a mockup preview of the initial UI concept. Right click the image and open in new tab then zoom in to view the whole version.
+                </p>
+              </div>
+
+              <div class="web-ui-grid">
+                <div class="web-ui-card text-center" data-aos="zoom-in">
+                  <div class="web-ui-thumbnail">
+                    <img 
+                      src="./assets/images/works_UI/RP UI.png" 
+                      alt="Rising Pro Esports Web UI" 
+                      class="web-ui-img modal-trigger-ui" 
+                    />
+                  </div>
+                  <p class="mt-3 fw-medium">Rising Pro Esports — Web UI Design (2024)</p>
+                </div>
+                <div class="web-ui-card text-center" data-aos="zoom-in">
+                  <div class="web-ui-thumbnail">
+                    <img 
+                      src="./assets/images/works_UI/KuboCuisine.png" 
+                      alt="KuboCuisine Web UI" 
+                      class="web-ui-img modal-trigger-ui" 
+                    />
+                  </div>
+                  <p class="mt-3 fw-medium">KuboCuisine — Web UI Design (2025)</p>
+                </div>
+              </div>
+            </section>
+
+            <div class="line" style="width: 100%; height: 2px; background-color: #4b4b4b; margin-top: 2rem;"></div>
+
+            <!--Videos Section-->
+            <section id="video-works" class="my-5 px-3">
+              <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="fw-bold">Video Projects</h2>
+                <h4 class="section-title fw-semibold">Tournament Visuals & Branding</h4>
+                <p class="mt-3">Click any video to view it in full with playback controls.</p>
+              </div>
+
+              <div class="row g-4" data-aos="fade-up">
+                <!-- Video 1 -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="video-card position-relative">
+                    <img src="./assets/videos/VideoThumbnail1.png" alt="Thumbnail 1" class="video-thumbnail w-100" />
+                    <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
+                    <video class="d-none" data-video-src="./assets/videos/ML Logo unveil.mp4"></video>
+                    <p class="logo-title">E-Days 2k23 Logo Unveil</p>
+                  </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="video-card position-relative">
+                    <img src="./assets/videos/VideoThumbnail2.png" alt="Thumbnail 2" class="video-thumbnail w-100" />
+                    <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
+                    <video class="d-none" data-video-src="./assets/videos/PostMatch Results Final MVP.mp4"></video>
+                    <p class="logo-title">E-Days 2k23 PostMatch Results</p>
+                  </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="video-card position-relative">
+                    <img src="./assets/videos/VideoThumbnail3.png" alt="Thumbnail 3" class="video-thumbnail w-100" />
+                    <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
+                    <video class="d-none" data-video-src="./assets/videos/Teaser Edays2k23.mp4"></video>
+                    <p class="logo-title">E-Days 2k23Teaser Video</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Video Modal -->
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                  <div class="modal-body p-0">
+                    <video id="modalVideo" class="w-100" controls></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5 px-3">
+      <div class="container d-md-flex justify-content-between align-items-start gap-5">
+        <!-- Contact Info + Socials -->
+        <div class="contact-info mb-4 mb-md-0">
+          <h3 class="fw-bold mb-3 ">Get in Touch</h3>
+          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">philjoseph547@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+639941186244">+63 994 118 6244</a></p>
+
+          <!--Social Media Links-->
+          <div class="social-links mt-4">
+            <h5 class="mb-2">Follow me</h5>
+            <div class="d-flex gap-3">
+              <a href="https://www.facebook.com/share/19ZF9GsX6R/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="https://www.instagram.com/seph.547?igsh=YWJiNWhyem1vdzM2" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="https://x.com/philjoseph_o?t=4QUtfjORjYpw_fOwvnbhEA&s=09" target="_blank"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+              <a href="https://wa.me/639941186244?text=Hello%20Philjoseph%2C%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect!" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+              <a href="https://github.com/seph54-ux" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form w-100">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn btn px-4">Send Message</button>
+        </form>
+      </div>
+
+    </section>
+
+<!-- Footer -->
+<footer class="footer text-center py-4 mt-5 text-white">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Philjoseph Orlina's Portfolio. All rights reserved.</p>
+    <small>
+      Designed and built with ♥ by Seph. |
+      <a href="#home" class="text-decoration-underline">Back to Top</a>
+    </small>
+  </div>
+</footer>
+
+  <!-- Success Modal -->
+  <div class="custom-modal" id="successModal">
+    <div class="modal-content">
+      <h3>🎉 Message Sent!</h3>
+      <p>Your message has been successfully sent. I’ll get back to you soon!</p>
+      <button class="close-btn" onclick="closeModal('successModal')">Close</button>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div class="custom-modal" id="errorModal">
+    <div class="modal-content">
+      <h3>⚠️ Submission Error</h3>
+      <p>Please check your inputs. All fields are required and must be valid.</p>
+      <button class="close-btn" onclick="closeModal('errorModal')">Close</button>
+    </div>
+  </div>
+
+  <!-- Image Modal for posters -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js?v=1758332384"></script>
+  
+  <!--Ityped Script-->
+  <script src="https://unpkg.com/ityped@1.0.2"></script>
+  <script>
+    ityped.init(document.querySelector("#ityped"), {
+      showCursor: false,
+      strings: ['Graphic Designer', 'Front-End Developer', 'Copywriter']
+    })
+  </script>
+
+  <!--SplideJS CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <!--EmailJS CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+  emailjs.init('EMAILJS_PUBLIC_KEY');
+  </script>
+
 </body>
+
 </html>

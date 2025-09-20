@@ -1,0 +1,209 @@
+
+.blog-hero {
+        background: linear-gradient(135deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 100%);
+        color: rgba(255, 255, 255, 1);
+        padding: 100px 0 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+.blog-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="20" cy="30" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="70" r="1" fill="white" opacity="0.1"/><circle cx="60" cy="15" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.navbar-logo {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+.blog-content h4 {
+    color: rgba(30, 58, 138, 1);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-left: 4px solid rgba(79, 172, 254, 1);
+    padding-left: 1rem;
+    position: relative;
+}
+.blog-content h4::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 100%);
+    border-radius: 2px;
+}
+.blog-content p {
+    margin-bottom: 1.5rem;
+    color: rgba(55, 65, 81, 1);
+}
+.highlight-quote {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 1) 0%, rgba(224, 242, 254, 1) 100%);
+    border-left: 5px solid rgba(79, 172, 254, 1);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+}
+.highlight-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(79, 172, 254, 1);
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    opacity: 0.3;
+}
+.chapter-intro {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(241, 245, 249, 1) 100%);
+    border: 1px solid rgba(226, 232, 240, 1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    position: relative;
+    border-left: 5px solid rgba(0, 242, 254, 1);
+}
+.chapter-intro h5 {
+    color: rgba(30, 64, 175, 1);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.back-button {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 100%);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+.back-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+    color: rgba(255, 255, 255, 1);
+}
+
+.read-time {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+.cta-section {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 1) 0%, rgba(224, 242, 254, 1) 100%);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 3rem 0;
+    border: 1px solid rgba(186, 230, 253, 1);
+}
+
+.cta-button {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 100%);
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+    color: rgba(255, 255, 255, 1);
+}
+.section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0)parent, rgba(79, 172, 254, 1), rgba(0, 0, 0, 0)parent);
+    margin: 3rem 0;
+}
+.featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.gaming-elements {
+    background: linear-gradient(45deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 25%, rgba(79, 172, 254, 1) 50%, rgba(0, 242, 254, 1) 75%, rgba(79, 172, 254, 1) 100%);
+    background-size: 400% 400%;
+    animation: gameGradient 8s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    font-weight: 700;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 1);
+    text-stroke: 0.5px rgba(255, 255, 255, 1);
+}
+@keyframes gameGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.esports-list {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(241, 245, 249, 1) 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid rgba(0, 242, 254, 1);
+}
+.esports-list li {
+    margin-bottom: 0.8rem;
+    color: rgba(71, 85, 105, 1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+.esports-list li::before {
+    content: '🎮';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 40px;
+    }
+    
+    .blog-hero {
+        padding: 60px 0 40px;
+    }
+    
+    .blog-content {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .highlight-quote {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .chapter-intro {
+        padding: 1.5rem;
+    }
+}

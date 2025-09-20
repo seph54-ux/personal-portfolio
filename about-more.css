@@ -1,0 +1,53 @@
+
+.about-more-content h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: rgba(255, 31, 31, 1);
+}
+
+body.dark-mode .about-more-content h1 {
+  color: rgba(255, 255, 31, 1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.blog-cards .btn {
+  border-radius: 24px;
+  font-weight: 500;
+  border-color: rgba(255, 31, 31, 1) !important;
+  color: rgba(255, 31, 31, 1) !important;
+}
+
+.blog-cards .btn:hover {
+  background-color: rgba(255, 31, 31, 1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+body.dark-mode .blog-cards .btn {
+  border-color: rgba(255, 255, 31, 1) !important;
+  color: rgba(255, 255, 31, 1) !important;
+}
+
+body.dark-mode .blog-cards .btn:hover {
+  background-color: rgba(255, 255, 31, 1) !important;
+  color: rgba(39, 39, 39, 1) !important;
+}
+
+body.dark-mode .card{
+    background: rgba(39, 39, 39, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode .card-title {
+    color: rgba(249, 249, 249, 1);
+}
