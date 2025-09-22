@@ -42,6 +42,10 @@
 </head>
 
 <body>
+  <div id="background-iframe-container">
+    <iframe id="light-mode-bg" src="https://skybox.blockadelabs.com/e/cd6d1ea6dd5097b6757136adbfb3f5ef" frameborder="0" allow="fullscreen"></iframe>
+    <iframe id="dark-mode-bg" src="https://skybox.blockadelabs.com/e/5689bac9eb9c0b4373ce70960f28ca64" frameborder="0" allow="fullscreen"></iframe>
+  </div>
   <!--Nav bar-->
   <nav class="navbar d-flex justify-content-between align-items-center sticky-top shadow px-4 py-2">
     <!-- Logo on the left -->
@@ -70,7 +74,6 @@
 
   <!-- Home Section -->
   <section id="home" id="home" class="d-flex align-items-center justify-content-center flex-wrap py-5">
-    <iframe src="https://skybox.blockadelabs.com/e/cd6d1ea6dd5097b6757136adbfb3f5ef" frameborder="0"></iframe>
     <div class="col-md-4 left">
       <h1>Hi, I'm Philjoseph Orlina.</h1>
       <h2>I am a <span id="ityped"></span></h2>
@@ -90,7 +93,7 @@
   </section>
 
   <!--About Section-->
-  <section id="about" class="py-5" style="background-color: #1a1a1a;">
+  <section id="about" class="py-5">
     <div class="container">
       <div class="row align-items-start about-section">
         <div class="col-md-5 mb-4 mb-md-0">
@@ -483,6 +486,99 @@
               </div>
             </div>
 
+            <div class="line" style="width: 100%; height: 2px; background-color: #4b4b4b; margin-top: 2rem;"></div>
+
+            <!-- Websites/Web App Section -->
+            <section id="web-projects" class="my-5 px-3">
+              <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="fw-bold">Websites & Web Apps</h2>
+                <h4 class="section-title fw-semibold">Projects I've Built</h4>
+                <p class="mt-3">Here are some of the websites and web applications I have developed.</p>
+              </div>
+
+              <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6" data-aos="fade-up">
+                  <div class="web-project-card card h-100">
+                    <img src="./assets/images/works_web/browzio.png" class="card-img-top" alt="Browzio Web App">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Browzio</h5>
+                      <h6>Search, filter, and explore helpful online tools for your creative projects.</h6>
+                      <p class="card-text">
+                        Browzio is your curated gateway to the internet’s most useful websites — all in one place. Whether you’re a designer, developer, content creator, or just a curious explorer, Browzio helps you discover the tools you need without the endless scrolling and guesswork.
+                      </p>
+                      <a href="https://browzio.vercel.app/" target="_blank" class="btn btn-primary btn-sm mt-2">Visit Website</a>
+
+                      <div class="project-stack mt-3">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="web-project-card card h-100">
+                    <img src="./assets/images/works_web/aquavend.png" class="card-img-top" alt="Aquavend">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">AquaVend</h5>
+                      <h6>AquaVend - An IoT Water Dispensing Management App</h6>
+                      <p class="card-text">
+                        AquaVend is a mobile web application for admins of the IoT water dispenser machine. The application is built with React and Vite, and it uses Firebase for authentication and hosting. This allows the admin to monitor the machines remotely given the parameters displayed in the app's dashboard once the machine is registered in an account.
+                      </p>
+                      <a href="https://aquavend-e3d60.web.app/" target="_blank" class="btn btn-primary btn-sm mt-2">Visit Website</a>
+                      <div class="project-stack mt-3">
+                        <span class="badge">React</span>
+                        <span class="badge">Vite</span>
+                        <span class="badge">Firebase</span>
+                        <span class="badge">Capacitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="web-project-card card h-100">
+                    <img src="./assets/images/works_web/pydocgen.png" class="card-img-top" alt="PyDocGen">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">PyDocGen</h5>
+                      <h6>A personal document generator supporting docs, pdf, and charts.</h6>
+                      <p class="card-text">
+                        A beautiful Flask-based web application that allows you to create custom Microsoft Word documents by executing your own Python scripts. This personal document generator features a modern neumorphism design with an uplifting animated gradient background, providing an elegant interface for programmatic document creation using the python-docx library.
+                      </p>
+                      <a href="https://pydocgen.up.railway.app/" target="_blank" class="btn btn-primary btn-sm mt-2">Visit Website</a>
+                      <div class="project-stack mt-3">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">Flask</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="web-project-card card h-100">
+                    <img src="./assets/images/web_projects/comingsoon.png" class="card-img-top" alt="Coming Soon">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Project Name (Coming Soon)</h5>
+                      <p class="card-text">
+                        Description of the upcoming web project goes here. Stay tuned for updates!
+                      </p>
+                      <a href="#" target="_blank" class="btn btn-primary btn-sm mt-2 disabled">Visit Website</a>
+                      <div class="project-stack mt-3">
+                        <span class="badge">Frontend Stack</span>
+                        <span class="badge">Backend Stack</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
 
       </div>
     </section>
