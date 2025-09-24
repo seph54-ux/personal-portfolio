@@ -1,14 +1,4 @@
 {
-  "cleanUrls": true,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "/.*",
-      "dest": "/error.html",
-      "status": 404
-    }
-  ]
+  "cleanUrls": true
 }
+
