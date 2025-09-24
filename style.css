@@ -450,7 +450,7 @@ body.dark-mode #logo-designs .logo-description p{
 .image-modal {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 10001;
   left: 0;
   top: 0;
   width: 100vw;
@@ -473,7 +473,8 @@ body.dark-mode #logo-designs .logo-description p{
 }
 
 /* Modal image */
-.image-modal .modal-content {
+.image-modal .modal-content,
+#videoModal .modal-content {
   max-width: 90vw;
   max-height: 90vh;
   width: auto;
@@ -521,48 +522,7 @@ body.dark-mode #logo-designs .logo-description p{
     padding: 0 0.625rem; /* 10px */
   }
 
-  .modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 9999;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(0.375rem); /* 6px */
-    background-color: rgba(0, 0, 0, 0.6);
-  }
 
-.modal-content-logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 90%;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 1rem; /* 16px */
-  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4); /* 10px 30px */
-}
-
-  .modal .modal-content-logo {
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 1rem; /* 16px */
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4); /* 10px 30px */
-  }
-
-  .close {
-    position: absolute;
-    top: 1.25rem; /* 20px */
-    right: 2.1875rem; /* 35px */
-    color: rgba(255, 255, 255, 1);
-    font-size: 2.5rem; /* 40px */
-    font-weight: bold;
-    cursor: pointer;
-  }
 
   body.dark-mode .logo-card, body.dark-mode .obs-overlay-card, body.dark-mode .web-ui-card{
     background: rgba(39, 39, 39, 1);
@@ -613,6 +573,8 @@ body.dark-mode #logo-designs .logo-description p{
 }
 
 /* Videos Section */
+
+
 .video-card {
   cursor: pointer;
   position: relative;
@@ -645,14 +607,13 @@ body.dark-mode #logo-designs .logo-description p{
   opacity: 1;
 }
 
-
 /* Contact Section */
 .contact-section {
   background-color: rgba(248, 249, 250, 0.6);
   backdrop-filter: blur(10px);
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); /* 4px 8px */
   border-radius: 1rem;
-  margin: 0 0.6rem;
+  margin: 0 0.5rem; /* Adds 0.5rem margin to the left and right */
 }
 
 .contact-info h3{
@@ -719,7 +680,7 @@ body.dark-mode .contact-form .submit-btn:hover{
 .footer{
   background: rgba(249, 249, 249, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.4);
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -1074,4 +1035,28 @@ body.dark-mode .web-project-card .btn:hover {
 body.dark-mode .web-project-card .badge {
   background-color: rgba(255, 255, 31, 1) !important;
   color: rgba(39, 39, 39, 1) !important;
+}
+
+.web-project-card .btn .fab,
+.web-project-card .btn .fa-solid {
+  margin-right: 0.5rem;
+}
+
+.web-project-card .btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+.web-project-card .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+body.dark-mode .web-project-card .btn-secondary {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark-mode .web-project-card .btn-secondary:hover {
+  background-color: #e2e6ea;
 }
