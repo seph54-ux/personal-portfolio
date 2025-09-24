@@ -40,7 +40,7 @@ This portfolio is powered by a solid front-end combo:
 ## 🔗 Live Website
 
 👉 [**Click here to visit my portfolio**](https://philjosephorlina.vercel.app/)
-or [**here**] (https://philjosephorlina.work.gd/)
+or [**here**](https://philjosephorlina.work.gd/)
 
 ---
 
