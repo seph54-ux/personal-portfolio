@@ -260,6 +260,11 @@ body.dark-mode .more-about-btn:hover, body.dark-mode .get-in-touch-btn:hover{
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tool-card:hover {
@@ -280,15 +285,100 @@ body.dark-mode .more-about-btn:hover, body.dark-mode .get-in-touch-btn:hover{
   transform: translateY(0);
 }
 
-.tool-icon {
-  width: 4rem; /* 64px / 16px = 4rem */
-  height: 4rem; /* 64px / 16px = 4rem */
-  object-fit: contain;
-  transition: transform 0.3s ease;
+.scroller {
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+  transition: 0.5s ease-in;
+}
+
+.scroller__inner {
+  display: flex;
+  gap: 4rem;
+  padding-block: 1rem;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#tech-stack h2{
+  color: rgba(255, 31, 31, 1);
+}
+
+.skills-container {
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    padding: 1rem 0;
+}
+
+.skill-card {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 120px; /* Fixed width for each card */
+    margin: 0; /* Gap handled by skills-wrapper gap */
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 }
 
 .tool-card:hover .tool-icon {
   transform: scale(1.1);
+}
+
+.tool-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  mix-blend-mode: normal;
+}
+
+body.dark-mode .tool-icon {
+  mix-blend-mode: screen;
 }
 
   body.dark-mode .tool-card, body.dark-mode .contact-section{
@@ -297,11 +387,11 @@ body.dark-mode .more-about-btn:hover, body.dark-mode .get-in-touch-btn:hover{
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); /* 4px 8px */
   }
 
-  body.dark-mode .container p,  body.dark-mode .tool-card h6, body.dark-mode .tool-desc {
+  body.dark-mode .container p,  body.dark-mode .tool-card h6, body.dark-mode .stack-card h6, body.dark-mode .tool-desc {
     color: rgba(230, 230, 230, 1);
   }
 
-  body.dark-mode #tools .container h2, body.dark-mode .about-section h3, body.dark-mode #portfolio h3{
+  body.dark-mode #tools .container h2, body.dark-mode #tech-stack .container h2, body.dark-mode .about-section h3, body.dark-mode #portfolio h3, h6{
     color: rgba(255, 255, 31, 1);
   }
   
@@ -613,7 +703,7 @@ body.dark-mode #logo-designs .logo-description p{
   backdrop-filter: blur(10px);
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); /* 4px 8px */
   border-radius: 1rem;
-  margin: 0 0.5rem; /* Adds 0.5rem margin to the left and right */
+  margin: 0 0.9rem;
 }
 
 .contact-info h3{
@@ -680,7 +770,7 @@ body.dark-mode .contact-form .submit-btn:hover{
 .footer{
   background: rgba(249, 249, 249, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   border-radius: 1rem 1rem 0 0;
 }
 
