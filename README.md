@@ -44,5 +44,5 @@ or [**here**](https://philjosephorlina.work.gd/)
 
 ---
 
-> Feel free to clone this repo or get inspiration for your own creative projects.  
+> Feel free to get inspiration for your own creative projects.  
 > Star ⭐ if you like it!
